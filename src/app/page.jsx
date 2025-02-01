@@ -9,10 +9,8 @@ export default function LandigPage() {
       <div>
          <div className="contenedor">
             {/* <h1 className="titulo">MENTALIS</h1> */}
-            <div className="contImagen">
-               <MainBanner />
-               {/* <Carousel /> */}
-            </div>
+            <MainBanner />
+            {/* <Carousel /> */}
             <div className="intro">
                <h2 className="introTitulo">
                   TRANSFORMADO VIDAS, NUTRIENDO MENTES.

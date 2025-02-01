@@ -1,0 +1,47 @@
+.banner-container {
+   display: flex;
+   justify-content: stretch;
+   align-items: stretch;
+   width: 100% !important; /* Asegura que ocupe toda la pantalla */
+   height: 90vh;
+   position: relative;
+   object-fit: cover !important;
+   object-position: center !important;
+   max-width: none !important;
+}@keyframes grow {
+   from {
+      transform: scale(0.9);
+      opacity: 0;
+   }
+   to {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+.banner-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   max-width: none;
+   animation: grow 2.5s ease-in-out; /* Aplica el efecto de crecimiento */
+}
+.banner-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad (0 = transparente, 1 = negro total) */
+   z-index: 1; /* Asegura que esté sobre la imagen */
+}
+.banner-text {
+   position: absolute;
+   top: 50%;               /* Lo posiciona en el centro vertical */
+   left: 50%;              /* Lo posiciona en el centro horizontal */
+   transform: translate(-50%, -50%) !important; /* Centra el texto completamente */
+   text-align: center;     /* Asegura que el texto esté centrado */
+   color: var(--verde-color);           /* Asegura que el texto sea visible */
+   width: 100%;            /* Asegura que el contenido no se corte */
+   z-index: 3;
+}

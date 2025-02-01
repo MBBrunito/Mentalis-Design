@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import "./MainBanner.css";
 
 const slides = [
    {
@@ -30,41 +31,54 @@ export default function MainBanner() {
    }, []);
 
    return (
-      <div className="relative w-screen h-[400px] md:h-[600px] lg:h-[700px] overflow-hidden">
-         <AnimatePresence>
-            <motion.div
-               key={slides[index].image}
-               className="absolute top-0 left-0 w-screen h-full"
-               initial={{ opacity: 0 }}
-               animate={{ opacity: 1 }}
-               exit={{ opacity: 0 }}
-               transition={{ duration: 1 }}
-            >
-               <Image
-                  src={slides[index].image}
-                  alt="Banner"
-                  fill
-                  className="banner-image"
-                  priority
-               />
-            </motion.div>
-         </AnimatePresence>
+      <div className="banner-container">
+         <div className="relative w-screen h-[400px] md:h-[600px] lg:h-[700px] overflow-hidden">
+            <AnimatePresence>
+               <motion.div
+                  key={slides[index].image}
+                  className="absolute top-0 left-0 w-screen h-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+               >
+                  <Image
+                     src={slides[index].image}
+                     alt="Banner"
+                     fill
+                     className="banner-image"
+                     priority
+                  />
+               </motion.div>
+            </AnimatePresence>
 
-         {/* Overlay oscuro */}
-         <div className="banner-overlay"></div>
+            {/* Overlay oscuro */}
+            <div className="banner-overlay"></div>
 
-         {/* Texto animado */}
-         <div className="absolute inset-0 flex items-center justify-center text-center">
-            <motion.h1
-               key={slides[index].text}
-               className="banner-text text-3xl md:text-5xl font-bold"
-               initial={{ opacity: 0, y: 20 }}
-               animate={{ opacity: 1, y: 0 }}
-               exit={{ opacity: 0, y: -20 }}
-               transition={{ duration: 1 }}
-            >
-               {slides[index].text}
-            </motion.h1>
+            {/* Texto animado */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-15">
+               {/* Texto */}
+               <motion.h1
+                  key={slides[index].text}
+                  className="banner-text text-3xl md:text-5xl font-bold"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 1 }}
+               >
+                  {slides[index].text}
+               </motion.h1>
+
+               {/* Botones CTA */}
+               <div className="mt-4 flex gap-4">
+                  <a href="/contacto" className="cta-button">
+                     Contáctanos
+                  </a>
+                  <a href="/servicios" className="cta-button secondary">
+                     Ver Servicios
+                  </a>
+               </div>
+            </div>
          </div>
       </div>
    );
