@@ -1,0 +1,86 @@
+.footer {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+   background-color: var(--durazno-color);
+   padding: 1vh;
+   font-size: 1.5vw;
+}
+
+.contLogoFoot {
+   background-color: white;
+   border: 0.1rem black solid;
+   border-radius: 5rem;
+   padding: 0.3rem;
+}
+.footer h3 {
+   margin: 0;
+}
+footer span {
+   margin: 0;
+}
+.redez {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+.icons {
+   color: black;
+   text-decoration: none;
+   font-size: 2rem;
+}
+
+
+@media screen and (max-width: 424px) {
+   .footer {
+      font-size: 2.5vw;
+   }
+   .redez img {
+      width: 6vw;
+   }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+   .footer {
+      font-size: 2.5vw;
+   }
+   .redez img {
+      width: 6vw;
+   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+   .redez {
+      gap: 0.8rem;
+   }
+   .icons {
+      font-size: 1.3rem;
+   }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+   .redez {
+      gap: 1rem;
+   }
+   .icons {
+      font-size: 1.7rem;
+   }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+   .redez {
+      gap: 1.2rem;
+   }
+   .icons {
+      font-size: 2rem;
+   }
+}
+
+@media screen and (min-width: 2560px) {
+   .redez {
+      gap: 1.2rem;
+   }
+   .icons {
+      font-size: 3rem;
+   }
+}

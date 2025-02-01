@@ -1,0 +1,85 @@
+/* Estilos generales */
+html,
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   font-family: var(--fuente-texto);
+   font-size: var(--size-texto);
+   font-weight: 400;
+   color: #333;
+   background-color: #fff;
+}
+
+/* Contenedor de contenido */
+.children {
+   flex: 1;
+   overflow-y: auto;
+}
+
+/* Variables globales */
+:root {
+   /* 🎨 Colores */
+   --durazno-color: #F7D6CC;
+   --verde-color: #D1E8A3;
+   --rosa-color: #F9CDE9;
+
+   /* 🖋️ Fuentes */
+   --fuente-general: var(--fuente-general), sans-serif;
+   --fuente-principal: var(--fuente-principal), serif;
+   --fuente-texto: var(--fuente-texto), sans-serif;
+   --fuente-acento: var(--fuente-acento), sans-serif;
+
+   /* 📏 Tamaños de fuente */
+   --size-principal: 36px;
+   --size-secundaria: 26px;
+   --size-texto: 16px;
+   --size-acento: 16px;
+
+   /* 🔤 Espaciados */
+   --letter-spacing-principal: -1.5px;
+   --letter-spacing-secundaria: -1px;
+   --letter-spacing-acento: -0.5px;
+   --word-spacing-principal: 5px;
+}
+
+/* 🏷️ Tipografía aplicada */
+h1, h2 {
+   font-family: var(--fuente-principal);
+   font-size: var(--size-principal);
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: var(--letter-spacing-principal);
+   word-spacing: var(--word-spacing-principal);
+}
+
+h3, h4 {
+   font-family: var(--fuente-principal);
+   font-size: var(--size-secundaria);
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: var(--letter-spacing-secundaria);
+}
+
+.acento {
+   font-family: var(--fuente-acento);
+   font-size: var(--size-acento);
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: var(--letter-spacing-acento);
+}
+
+.icons {
+   font-size: 30px !important; /* Tamaño de los iconos */
+   color: #333; /* Color inicial */
+   display: inline-block; /* Asegura que tenga un área clickeable */
+   line-height: 1; /* Evita espacios innecesarios */
+   transition: transform 0.3s ease-in-out; /* Suavizar la animación */
+   padding: 5px;
+   border-radius: 5px;
+}
+
+.icons:hover {
+   transform: scale(1.2); /* Crece un 20% al pasar el mouse */
+   background-color: white;
+}

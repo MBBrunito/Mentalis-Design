@@ -1,0 +1,161 @@
+/* Contenedor del Header */
+.header {
+   width: 100%;
+   /*position: relative; /* Se mantiene en su lugar */
+   z-index: 10;
+}
+
+/* Barra superior con redes - Fija en la parte superior */
+.topBar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 40px;
+   background-color: var(--durazno-color);
+   color: black;
+   /*position: relative; /* Se mantiene en su lugar */
+   z-index: 50;
+}
+.topBar p {
+   margin-left: 20px;
+}
+.redes a {
+   margin-left: 10px;
+}
+
+.red {
+   margin-right:20px ;
+}
+
+.red a {
+   display: inline-flex; /* Asegura que el enlace tenga el tamaño del ícono */
+   align-items: center; /* Centra verticalmente */
+   justify-content: center; /* Centra horizontalmente */
+}
+
+/* Contenedor principal del Navbar */
+.contNav {
+   display: flex;
+   width: 100%;
+   height: 60px;
+   background-color: transparent;
+   position: fixed;
+   top: 40px; /* Comienza debajo de la barra de redes */
+   z-index: 15;
+   padding: 10px 0;
+   transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Cuando se hace scroll, la Navbar se pega arriba */
+.contNav.scrolled {
+   top: 5px !important; /* Se pega arriba de la pantalla */
+   /* background-color: rgba(255, 255, 255, 0.9); /* Opcional: efecto de transparencia */
+   /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Navbar principal */
+.navBar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 1140px;
+   max-width: 1200px;
+   padding: 0.5rem;
+   margin: 0 auto;
+}
+
+/* Logo */
+.contLogoNav {
+   display: flex;
+   align-items: center;
+   background-color: white;
+   border-radius: 5px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Menú principal */
+.menus {
+   display: flex;
+   justify-content: space-between; /* Centra los botones */
+   gap: 10px; /* Espacio uniforme entre botones */
+   align-items: center;
+   width: 450px;
+   text-align: center;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   background: white;
+   border-radius: 5px;
+   padding: 0 10px;
+}
+
+/* Enlaces del menú */
+.boton {
+   text-decoration: none;
+   color: black;
+   font-size: 14px !important;
+   transition: all 0.3s ease-in-out;
+   padding: 5px; /* Añadir padding uniforme */
+}
+
+
+/* Efecto hover */
+.boton:hover {
+   font-weight: bold;
+   color: saddlebrown;
+}
+
+/* Estado activo */
+.boton.activo {
+   color: saddlebrown;
+   font-weight: bold;
+   padding-bottom: 5px;
+}
+
+.menuToggle {
+   display: none;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+   /* Botón de menú móvil */
+   .menuToggle {
+      display: none;
+      font-size: 35px; /* Ajusta el tamaño del icono */
+      color: #333;
+      background: white;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      width: 50px; /* Asegura que el ancho sea exacto */
+      height: 50px; /* Asegura que tenga altura igual al ancho */
+      display: flex; /* Asegura centrado */
+      align-items: center; /* Centra verticalmente */
+      justify-content: center; /* Centra horizontalmente */
+      padding: 0; /* Elimina espacios extra */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .menus {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 150px;
+      padding: 10px 0;
+   }
+
+   .menus.open {
+      display: flex;
+   }
+
+   .menuToggle {
+      display: flex; /* Asegura que sea visible en móviles */
+   }
+}
+
+
+.acento {
+   letter-spacing: 0;
+}

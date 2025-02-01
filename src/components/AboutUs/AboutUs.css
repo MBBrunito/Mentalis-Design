@@ -1,0 +1,80 @@
+.aboutUs {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 90%;
+   gap: 0.5rem;
+}
+
+.cadaUno {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: black solid 1px;
+   border-radius: 10px;
+   padding: 0.5rem;
+   background-color: var(--rosa-color);
+}
+.titleH2 {
+   font-family: "Playfire";
+   font-weight: 900;
+   text-align: center;
+   margin: 0;
+}
+.titleH3 {
+   font-family: "Playfire";
+   font-weight: 900;
+   text-align: center;
+   margin: 0;
+}
+.presenta {
+   font-family: "generalFont", sans-serif;
+   margin: 0;
+   text-align: justify;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 5;
+   -webkit-box-orient: vertical;
+}
+.showFullText {
+   -webkit-line-clamp: unset;
+}
+.readMoreBtn {
+   background-color: var(--verde-color);
+   color: blue;
+   padding: 8px 12px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+}
+
+.red {
+   display: flex;
+   width: 10rem;
+   justify-content: space-around;
+   font-size: 2rem;
+   text-decoration: none;
+}
+.red a:visited {
+   color: blue;
+}
+.red a:hover {
+   color: black;
+}
+
+@media screen and (min-width: 768px) {
+   .aboutUs {
+      width: 80%;
+      flex-direction: row;
+      justify-content: center;
+   }
+   .cadaUno {
+      width: 30%;
+   }
+   .fotoNos {
+      width: 80%;
+      height: auto;
+   }
+}

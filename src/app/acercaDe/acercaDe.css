@@ -1,0 +1,64 @@
+.acercaDe h2 {
+   font-family: "Playfire";
+   font-weight: 900;
+   text-align: center;
+   margin: 0;
+}
+.info {
+   font-family: "generalFont", sans-serif;
+   margin: 0;
+   text-align: justify;
+}
+
+.visiones {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.visiones div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width:85%;
+}
+
+.mision {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.mision div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 85%;
+}
+
+.objetivos {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.objetivos div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 85%;
+}
+
+@media screen and (min-width: 768px)  {
+   .visiones div {
+      width: 70%;
+   }.mision div {
+      width: 70%;
+   }
+   .objetivos div {
+      width: 70%;
+   }
+}

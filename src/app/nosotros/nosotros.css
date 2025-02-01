@@ -1,0 +1,24 @@
+.nosotros {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.contNos {
+   width: 85%;
+   text-align: justify;
+}
+.titleH2 {
+   font-family: "Playfair";
+   font-weight: 900;
+   text-align: center;
+}
+.textoNormal {
+   font-family: "generalFont", sans-serif;
+}
+
+@media screen and (min-width: 768px)  {
+   .contNos {
+      width: 60%;
+   }
+}

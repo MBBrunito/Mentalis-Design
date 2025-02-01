@@ -1,0 +1,11 @@
+.vision h3 {
+   margin: 0;
+}
+.vision p {
+   margin: 0;
+}
+.visionImage {
+   border-radius: 10px;
+   width: 10rem;
+   height: 10rem;
+}
