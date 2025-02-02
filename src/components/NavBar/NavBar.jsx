@@ -34,7 +34,7 @@ const NavBar = () => {
       <header className="header">
          {/* Barra superior con redes */}
          <div className="topBar">
-            <p className="acento">
+            <p className="acento texto">
                Insurgentes 317 (Planta Alta), Zona Centro, Metehuala, S.L.P.
             </p>
             <div className="redes">

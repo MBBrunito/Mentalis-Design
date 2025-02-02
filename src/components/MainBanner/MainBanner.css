@@ -8,7 +8,8 @@
    object-fit: cover !important;
    object-position: center !important;
    max-width: none !important;
-}@keyframes grow {
+}
+@keyframes grow {
    from {
       transform: scale(0.9);
       opacity: 0;
@@ -37,11 +38,101 @@
 }
 .banner-text {
    position: absolute;
-   top: 50%;               /* Lo posiciona en el centro vertical */
+   padding: 0 20px;
+   top: 35%;               /* Lo posiciona en el centro vertical */
    left: 50%;              /* Lo posiciona en el centro horizontal */
    transform: translate(-50%, -50%) !important; /* Centra el texto completamente */
    text-align: center;     /* Asegura que el texto esté centrado */
    color: var(--verde-color);           /* Asegura que el texto sea visible */
    width: 100%;            /* Asegura que el contenido no se corte */
+   font-size: 40px;
+   line-height: 45px;
    z-index: 3;
+}
+
+.ctaMain {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position:absolute;
+   top: 60%;               /* Lo posiciona en el centro vertical */
+   left: 50%;              /* Lo posiciona en el centro horizontal */
+   transform: translate(-50%, -50%) !important; /* Centra el texto completamente */
+   text-align: center;     /* Asegura que el texto esté centrado */
+   z-index: 3;
+   width: 100%;
+}
+.ctaMain p {
+   font-size: 21px;
+   font-weight: 500;
+   color: var(--durazno-color);
+   width: 620px;
+   line-height: 25px;
+}
+.cta-buttons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   text-align: center;     /* Asegura que el texto esté centrado */
+   z-index: 3;
+}
+
+.cta-button {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   padding: 7px 10px;
+   font-size: 15px;
+   font-weight: 500;
+   color: white;
+   background-color: #ff6b6b; /* Color principal */
+   border-radius: 8px;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+   background-color: #e63946; /* Color más oscuro al pasar el mouse */
+}
+
+.cta-button.secondary {
+   background-color: transparent;
+   border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+   background-color: white;
+   color: #e63946;
+}
+
+
+@media (max-width: 768px) {
+   .banner-container {
+      height: 85vh;
+   }
+   .banner-text {
+      width: 700px;
+      top: 40%;
+   }
+}
+
+
+@media (max-width: 480px) {
+   .banner-text {
+      font-size: 30px;
+      width: 80%;
+      top: 35%;
+      line-height: 35px;
+   }
+   .ctaMain p {
+      font-size: 18px;
+      width: 95%;
+   }
+   .cta-buttons {
+      flex-direction: column;;
+   }
 }

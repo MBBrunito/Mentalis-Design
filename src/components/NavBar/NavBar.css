@@ -14,7 +14,6 @@
    height: 40px;
    background-color: var(--durazno-color);
    color: black;
-   /*position: relative; /* Se mantiene en su lugar */
    z-index: 50;
 }
 .topBar p {
@@ -155,7 +154,14 @@
    }
 }
 
-
 .acento {
    letter-spacing: 0;
+   line-height: 16px;
+}
+
+
+@media (max-width: 480px) {
+   .topBar p {
+      padding-top: 4px;
+   }
 }

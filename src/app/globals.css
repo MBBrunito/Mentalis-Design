@@ -83,29 +83,3 @@ h3, h4 {
    transform: scale(1.2); /* Crece un 20% al pasar el mouse */
    background-color: white;
 }
-
-.cta-button {
-   display: inline-block;
-   padding: 12px 24px;
-   font-size: 1.1rem;
-   font-weight: bold;
-   color: white;
-   background-color: #ff6b6b; /* Color principal */
-   border-radius: 8px;
-   text-decoration: none;
-   transition: all 0.3s ease-in-out;
-}
-
-.cta-button:hover {
-   background-color: #e63946; /* Color más oscuro al pasar el mouse */
-}
-
-.cta-button.secondary {
-   background-color: transparent;
-   border: 2px solid white;
-}
-
-.cta-button.secondary:hover {
-   background-color: white;
-   color: #e63946;
-}
