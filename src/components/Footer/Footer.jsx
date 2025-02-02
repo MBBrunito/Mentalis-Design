@@ -34,6 +34,29 @@ const Footer = () => {
                </div>
             </div>
          </footer>
+         <div className="footer-map-review">
+            <div className="footer-map">
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.9265619498324!2d-100.6392379!3d23.642800899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8680a964b0651455%3A0x958559e7f42b33f2!2sMentalis!5e0!3m2!1ses!2sar!4v1738517528188!5m2!1ses!2sar"
+                  width="100%"
+                  height="450px"
+                  style={{ border: 0 }}
+                  // allowfullscreen=""
+                  loading="lazy"
+                  // referrerpolicy="no-referrer-when-downgrade"
+               ></iframe>
+            </div>
+            <div className="footer-review">
+               <script
+                  src="https://static.elfsight.com/platform/platform.js"
+                  async
+               ></script>
+               <div
+                  className="elfsight-app-87b8fce7-beb2-4ee4-8efb-3e538118172f"
+                  data-elfsight-app-lazy
+               ></div>
+            </div>
+         </div>
       </div>
    );
 };

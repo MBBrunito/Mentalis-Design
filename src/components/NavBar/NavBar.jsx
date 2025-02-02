@@ -8,7 +8,10 @@ import {
    faSquareFacebook,
    faInstagram,
    faWhatsapp,
+   faGoogle, // ✅ Ícono de Google
 } from "@fortawesome/free-brands-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons"; // ✅ Ícono de estrella
+
 import Image from "next/image";
 import "./NavBar.css";
 
@@ -43,6 +46,7 @@ const NavBar = () => {
                      href="https://www.facebook.com/mentalispyh"
                      target="_blank"
                      rel="noopener noreferrer"
+                     title="Síguenos en Facebook"
                   >
                      <FontAwesomeIcon
                         className="icons"
@@ -53,6 +57,7 @@ const NavBar = () => {
                      href="https://www.instagram.com/mentalispyh/"
                      target="_blank"
                      rel="noopener noreferrer"
+                     title="Síguenos en Instagram"
                   >
                      <FontAwesomeIcon className="icons" icon={faInstagram} />
                   </a>
@@ -60,8 +65,28 @@ const NavBar = () => {
                      href="https://wa.me/+524881241263"
                      target="_blank"
                      rel="noopener noreferrer"
+                     title="Habla con uno de nuestros especialistas"
                   >
                      <FontAwesomeIcon className="icons" icon={faWhatsapp} />
+                  </a>
+                  {/* <a
+                     href="https://search.google.com/local/writereview?placeid=TU_PLACE_ID"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="google-review-link"
+                  >
+                     <FontAwesomeIcon className="icons" icon={faGoogle} />
+                  </a> */}
+                  <a
+                     href="https://g.page/r/CUZX2Rhn91XIEAI/review"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     title="Déjanos una reseña en Google"
+                  >
+                     <FontAwesomeIcon
+                        className="icons icon-star"
+                        icon={faStar}
+                     />
                   </a>
                </div>
             </div>

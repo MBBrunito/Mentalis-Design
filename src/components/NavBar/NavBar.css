@@ -19,18 +19,19 @@
 .topBar p {
    margin-left: 20px;
 }
-.redes a {
-   margin-left: 10px;
+.redes {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
 }
 
 .red {
-   margin-right:20px ;
-}
-
-.red a {
-   display: inline-flex; /* Asegura que el enlace tenga el tamaño del ícono */
-   align-items: center; /* Centra verticalmente */
-   justify-content: center; /* Centra horizontalmente */
+   display: flex;
+   align-items: center;
+   margin-right: 20px;
+   gap: 10px;
+   transition: all 0.3s ease-in-out;
 }
 
 /* Contenedor principal del Navbar */
@@ -161,7 +162,21 @@
 
 
 @media (max-width: 480px) {
+   .topBar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+   }
    .topBar p {
-      padding-top: 4px;
+      margin: 5px;
+      width: 260px;
+      text-align: center;
+   }
+   .red {
+      margin: 0;
+   }
+   .contNav {
+      top: 80px;
    }
 }

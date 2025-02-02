@@ -75,11 +75,20 @@ h3, h4 {
    display: inline-block; /* Asegura que tenga un área clickeable */
    line-height: 1; /* Evita espacios innecesarios */
    transition: transform 0.3s ease-in-out; /* Suavizar la animación */
-   padding: 5px;
+   padding: 3px;
    border-radius: 5px;
 }
 
 .icons:hover {
    transform: scale(1.2); /* Crece un 20% al pasar el mouse */
    background-color: white;
+}
+
+.icon-star {
+   color: gold;
+   font-size: 22px !important;
+   transition: transform 0.3s ease-in-out;
+   background-color: #333;
+   padding: 3px;
+   border-radius: 50%;
 }
