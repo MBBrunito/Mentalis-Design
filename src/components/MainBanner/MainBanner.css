@@ -38,7 +38,6 @@
 }
 .banner-text {
    position: absolute;
-   padding: 0 20px;
    top: 35%;               /* Lo posiciona en el centro vertical */
    left: 50%;              /* Lo posiciona en el centro horizontal */
    transform: translate(-50%, -50%) !important; /* Centra el texto completamente */

@@ -8,15 +8,15 @@ import "./MainBanner.css";
 const slides = [
    {
       image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_d6f69b22_qzl33e.jpg",
-      text: "Terapia psicológica en línea y presencial",
+      text: "Terapia psicológica\n en línea y presencial",
    },
    {
       image: "https://res.cloudinary.com/daoavxvau/image/upload/v1704738922/Mentalis/WhatsApp_Image_2024-01-08_at_15.12.32_3_bhiuob.jpg",
-      text: "Psicólogos profesionales en Mentalis",
+      text: "Psicólogos profesionales\n en Mentalis",
    },
    {
       image: "https://res.cloudinary.com/daoavxvau/image/upload/v1704738921/Mentalis/WhatsApp_Image_2024-01-08_at_15.12.32_4_wxsxgr.jpg",
-      text: "Bienestar emocional con expertos en salud mental",
+      text: "Bienestar emocional\n con expertos en salud mental",
    },
 ];
 
@@ -32,7 +32,7 @@ export default function MainBanner() {
 
    return (
       <div className="banner-container">
-         <div className="relative w-screen h-[400px] md:h-[600px] lg:h-[700px] overflow-hidden">
+         <div className="relative w-screen h-[300px] md:h-[600px] lg:h-[700px] overflow-hidden">
             <AnimatePresence>
                <motion.div
                   key={slides[index].image}
@@ -60,23 +60,34 @@ export default function MainBanner() {
                {/* Texto */}
                <motion.h1
                   key={slides[index].text}
-                  className="banner-text text-3xl md:text-5xl font-bold"
+                  className="banner-text"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 1 }}
                >
-                  {slides[index].text}
+                  {slides[index].text.split("\n").map((line, i) => (
+                     <div key={i}>{line}</div>
+                  ))}
                </motion.h1>
 
                {/* Botones CTA */}
-               <div className="mt-4 flex gap-4">
-                  <a href="/contacto" className="cta-button">
-                     Contáctanos
-                  </a>
-                  <a href="/servicios" className="cta-button secondary">
-                     Ver Servicios
-                  </a>
+               <div className="ctaMain">
+                  <p className="acento">
+                     Impulsamos tu bienestar y crecimiento profesional con
+                     psicoterapia, talleres y formación especializada
+                  </p>
+                  <div className="cta-buttons">
+                     <a href="/contacto" className="cta-button acento">
+                        Contáctanos
+                     </a>
+                     <a
+                        href="/servicios"
+                        className="cta-button secondary acento"
+                     >
+                        Ver Servicios
+                     </a>
+                  </div>
                </div>
             </div>
          </div>

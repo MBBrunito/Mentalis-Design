@@ -1,86 +1,59 @@
-.footer {
+.footer-container {
+   position: relative; /* Para que el overlay se posicione dentro */
+   background-image: url("https://res.cloudinary.com/daoavxvau/image/upload/v1704738921/Mentalis/WhatsApp_Image_2024-01-08_at_15.12.32_4_wxsxgr.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-color: #222;
+   color: white;
+   padding: 50px 0;
    display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   text-align: center;
-   background-color: var(--durazno-color);
-   padding: 1vh;
-   font-size: 1.5vw;
+   justify-content: center;
 }
 
-.contLogoFoot {
-   background-color: white;
-   border: 0.1rem black solid;
-   border-radius: 5rem;
-   padding: 0.3rem;
+/* Overlay */
+.footer-container::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
+   z-index: 1;
 }
-.footer h3 {
-   margin: 0;
-}
-footer span {
-   margin: 0;
-}
-.redez {
+
+/* Asegurar que el contenido del footer esté sobre el overlay */
+.footer-content {
+   position: relative;
+   z-index: 2; /* Se coloca por encima del overlay */
+   width: 80%;
+   max-width: 1200px;
    display: flex;
+   justify-content: space-between;
    align-items: center;
-   gap: 0.5rem;
-}
-.icons {
-   color: black;
-   text-decoration: none;
-   font-size: 2rem;
+   gap: 30px;
 }
 
 
-@media screen and (max-width: 424px) {
-   .footer {
-      font-size: 2.5vw;
-   }
-   .redez img {
-      width: 6vw;
-   }
+.footer-message {
+   font-size: 20px;
+   font-family: var(--fuente-texto);
+   width: 50%;
 }
 
-@media screen and (min-width: 425px) and (max-width: 767px) {
-   .footer {
-      font-size: 2.5vw;
-   }
-   .redez img {
-      width: 6vw;
-   }
+.footer-form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   width: 40%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-   .redez {
-      gap: 0.8rem;
-   }
-   .icons {
-      font-size: 1.3rem;
-   }
-}
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
-   .redez {
-      gap: 1rem;
-   }
-   .icons {
-      font-size: 1.7rem;
-   }
-}
 
-@media screen and (min-width: 1440px) and (max-width: 2559px) {
-   .redez {
-      gap: 1.2rem;
-   }
-   .icons {
-      font-size: 2rem;
-   }
-}
-
-@media screen and (min-width: 2560px) {
-   .redez {
-      gap: 1.2rem;
-   }
-   .icons {
-      font-size: 3rem;
+@media (max-width: 768px) {
+   .footer-content {
+      background-attachment: scroll; /* En móviles, la imagen se desplazará normalmente */
    }
 }

@@ -1,0 +1,49 @@
+.div-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+}
+.form-mail {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+}
+
+.form-mail input {
+      width: 95%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+}
+
+.form-mail textarea {
+      width: 95%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+}
+
+.form-mail button {
+   display: block;      /* Hace que el botón ocupe una línea completa */
+   width: 100%;         /* Ocupa el ancho completo del contenedor */
+   background-color: #ff6b6b;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 10px;
+   font-size: 15px;
+   cursor: pointer;
+   transition: background 0.3s;
+}
+
+.form-mail button:hover {
+   background-color: #e63946; /* Color más oscuro al pasar el mouse */;
+}
