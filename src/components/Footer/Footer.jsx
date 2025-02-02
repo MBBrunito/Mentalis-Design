@@ -18,7 +18,10 @@ const Footer = () => {
             <div className="footer-content">
                {/* Mensaje de invitación */}
                <div className="footer-message">
-                  <h2>¿Listo para transformar tu bienestar?</h2>
+                  <h2>
+                     ¿Listo para transformar <br />
+                     tu bienestar?
+                  </h2>
                   <p>
                      Contáctanos y agenda una consulta con nuestros
                      especialistas.

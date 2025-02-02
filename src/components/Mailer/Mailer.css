@@ -47,3 +47,25 @@
 .form-mail button:hover {
    background-color: #e63946; /* Color más oscuro al pasar el mouse */;
 }
+
+.error {
+   color: red;
+   font-size: 14px;
+   margin-top: 0px;
+   margin: 0;
+   background-color: rgba(255, 0, 0, 0.1); /* Un fondo suave para más visibilidad */
+   display: inline-block;
+   text-align: center;
+}
+
+.recaptcha-container {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+
+.recaptcha-error {
+   border: 2px solid red;
+   border-radius: 5px;
+   padding: 5px;
+}
