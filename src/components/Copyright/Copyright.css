@@ -4,7 +4,6 @@
       align-items: center;
       gap: 0px;
       padding: 0 20px;
-      background-color: var(--rosa-color);
       color: black;
       font-size: 14px;
       text-align: center;
@@ -20,7 +19,7 @@
 }
 
 @media (max-width: 480px) {
-   .copyright-container {
+      .copyright-container {
       flex-direction: column;
-   }
+      }
 }

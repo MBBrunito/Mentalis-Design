@@ -140,6 +140,25 @@ export const dataNavbar = [
    },
 ];
 
+export const dataFooterMenu = [
+   {
+      name: "Accesibility",
+      url: "/",
+   },
+   {
+      name: "Privacy Policy",
+      url: "/",
+   },
+   {
+      name: "Terms of Service",
+      url: "/",
+   },
+   {
+      name: "Site Map",
+      url: "/",
+   },
+];
+
 export const dataObjective = [
    {
       title: "Este es el título de los objetivos",

@@ -12,6 +12,7 @@ import { Mailer } from "../Mailer/Mailer";
 import GoogleReviewsWidget from "../ReviewsGoogle/GoogleReviewsWidget";
 import FooterMentalis from "../FooterMentalis/FooterMentalis";
 import Copyright from "../Copyright/Copyright";
+import FooterMenu from "../FooterMenu/FooterMenu";
 
 const Footer = () => {
    return (
@@ -52,6 +53,7 @@ const Footer = () => {
             <GoogleReviewsWidget />
          </div>
          <FooterMentalis />
+         <FooterMenu />
          <Copyright />
       </div>
    );

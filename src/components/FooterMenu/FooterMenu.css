@@ -1,0 +1,14 @@
+.footer-menu {
+   display: flex;
+   justify-content: center;
+   padding: 0 20px;
+   background-color: var(--rosa-color);
+   border-top: 1px solid #e0e0e0;
+}
+
+.menuFoot {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   padding: 2px 0;
+}
