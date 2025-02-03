@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import "./page.css";
-import "../components/service/Paleta.css";
-import Carousel from "@/components/CarruselHome/Carrusel";
 import MainBanner from "@/components/MainBanner/MainBanner";
 
 export default function LandigPage() {
