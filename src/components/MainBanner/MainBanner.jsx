@@ -78,13 +78,10 @@ export default function MainBanner() {
                      psicoterapia, talleres y formación especializada
                   </p>
                   <div className="cta-buttons">
-                     <a href="/contacto" className="cta-button acento">
+                     <a href="/" className="cta-button acento">
                         Contáctanos
                      </a>
-                     <a
-                        href="/servicios"
-                        className="cta-button secondary acento"
-                     >
+                     <a href="/" className="cta-button secondary acento">
                         Ver Servicios
                      </a>
                   </div>
