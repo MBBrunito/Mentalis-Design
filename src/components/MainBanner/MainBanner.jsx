@@ -66,7 +66,7 @@ export default function MainBanner() {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 1 }}
                >
-                  {slides[index].text.split("\n").map((line, i) => (
+                  {(slides[index]?.text || "").split("\n").map((line, i) => (
                      <div key={i}>{line}</div>
                   ))}
                </motion.h1>
