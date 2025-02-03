@@ -1,0 +1,124 @@
+.footer {
+   display: flex;
+   justify-content: center;
+   background-color: var(--verde-color);
+}
+.footer__logo{
+   width: 200px !important;
+}
+.footer__slogan {
+   text-align: center;
+   font-size: 14px;
+   font-weight: bold;
+   color: #333; /* Color oscuro para contraste */
+   margin-top: 10px;
+}
+
+.footer h3 {
+   font-family: var(--fuente-segundaria);
+   font-size: 22px;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: var(--letter-spacing-secundaria);
+   margin: 0;
+   color: #000000;
+}
+.footer p {
+   font-family: var(--fuente-texto);
+   font-size: 16px;
+   font-weight: 400;
+   margin: 3px 0 20px 0;
+}
+
+.footer__container {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   width: 80%;
+}
+
+.footer__logo {
+   padding: 20px;
+}
+
+.footer-contacto {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   padding: 20px;
+}
+
+.footer__hours {
+   text-align: center;
+   padding: 20px;
+}
+
+#horario {
+   width: 100%;
+   max-width: 300px; /* Ajusta el ancho máximo si lo necesitas */
+   border-collapse: collapse; /* Elimina espacios entre bordes */
+   background-color: #cce5b8; /* Color de fondo similar al de la imagen */
+   border: 1px solid #a1c181; /* Borde para definir la tabla */
+   font-family: var(--fuente-texto); /* Usa la fuente global */
+}
+
+/* Estilos de las celdas */
+#horario td {
+   padding: 5px; /* Espaciado interno */
+   border: 1px solid #a1c181; /* Borde entre celdas */
+   text-align: left; /* Alineación del texto */
+   font-size: 14px; /* Ajuste de tamaño */
+   font-weight: 500;
+   color: black; /* Texto negro */
+}
+
+/* Ajuste para los días de la semana */
+#horario td:first-child {
+   font-weight: 500;
+}
+
+/* Estilo para resaltar el día actual */
+#horario tr[data-day="0"] td {
+   font-weight: bold;
+   color: #333;
+}
+
+/* Resaltar el horario actual */
+#horario .highlight {
+   background-color: #ffeb99; /* Amarillo claro */
+   font-weight: bold;
+}
+.contact-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.redFooter {
+   display: flex;
+   gap: 10px;
+}
+
+
+/* Responsive: Ajustar en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+   .footer__container {
+      width: 100%;
+   }
+}
+@media (max-width: 480px) {
+   .footer__container {
+      flex-direction: column;
+      align-items: center;
+   }
+   #horario {
+      font-size: 12px; /* Reduce el tamaño de fuente en móviles */
+      max-width: 100%;
+   }
+
+   #horario td {
+      padding: 6px 10px;
+   }
+}
+
+

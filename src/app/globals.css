@@ -11,6 +11,28 @@ body {
    background-color: #fff;
 }
 
+a {
+   text-decoration: none !important; /* Elimina el subrayado */
+   color: inherit !important; /* Mantiene el color heredado del texto */
+   transition: color 0.3s ease-in-out; /* Suaviza cambios de color en hover */
+}
+
+a:hover {
+   color: #000 !important; /* Cambia el color en hover (ajústalo a tu diseño) */
+   text-decoration: none !important;
+}
+
+* {
+   scrollbar-width: thin;
+   scrollbar-color: var(--durazno-color) #333;
+}
+
+body {
+   background-size: 100vh;
+   overflow-x: hidden;
+}
+
+
 /* Contenedor de contenido */
 .children {
    flex: 1;

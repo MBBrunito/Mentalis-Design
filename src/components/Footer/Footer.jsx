@@ -9,6 +9,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { Mailer } from "../Mailer/Mailer";
+import GoogleReviewsWidget from "../ReviewsGoogle/GoogleReviewsWidget";
+import FooterMentalis from "../FooterMentalis/FooterMentalis";
+import Copyright from "../Copyright/Copyright";
 
 const Footer = () => {
    return (
@@ -46,17 +49,10 @@ const Footer = () => {
                   // referrerpolicy="no-referrer-when-downgrade"
                ></iframe>
             </div>
-            <div className="footer-review">
-               <script
-                  src="https://static.elfsight.com/platform/platform.js"
-                  async
-               ></script>
-               <div
-                  className="elfsight-app-87b8fce7-beb2-4ee4-8efb-3e538118172f"
-                  data-elfsight-app-lazy
-               ></div>
-            </div>
+            <GoogleReviewsWidget />
          </div>
+         <FooterMentalis />
+         <Copyright />
       </div>
    );
 };

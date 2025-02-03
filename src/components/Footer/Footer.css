@@ -1,3 +1,9 @@
+@supports (-webkit-touch-callout: none) {
+   .footer-container {
+      background-attachment: scroll !important;
+   }
+}
+
 .footer-container {
    position: relative; /* Para que el overlay se posicione dentro */
    background-image: url("https://res.cloudinary.com/daoavxvau/image/upload/v1704738921/Mentalis/WhatsApp_Image_2024-01-08_at_15.12.32_4_wxsxgr.jpg");
@@ -44,6 +50,9 @@
    width: 50%;
    padding: 40px;
 }
+.footer-message h2 {
+   margin: 0;
+}
 
 .footer-form {
    display: flex;
@@ -58,7 +67,8 @@
    justify-content: center;
    align-items: center;
    gap: 0;
-   margin-top: 6px;
+   margin-bottom: -6px;
+   background-color: var(--durazno-color);
 }
 .footer-map {
    width: 50%;
@@ -70,6 +80,10 @@
 @media (max-width: 768px) {
    .footer-content {
       background-attachment: scroll; /* En móviles, la imagen se desplazará normalmente */
+      width: 100%;
+   }
+   .footer-message {
+      padding: 0 20px;
    }
 }
 
@@ -78,10 +92,17 @@
       flex-direction: column;
    }
    .footer-message {
-      width: 100%;
+      width: 100vw;
+      background-color: cadetblue;
+      padding: 0;
+      text-align: center;
+   }
+   .footer-message h2 {
+      font-size: 25px;
    }
    .footer-form {
       width: 100%;
+      padding: 0;
    }
    .footer-map-review {
       flex-direction: column;
@@ -90,6 +111,7 @@
       width: 100%;
    }
    .footer-review {
-      width: 100%;
+      width: 100vw;
+      padding: 30px 0;
    }
 }

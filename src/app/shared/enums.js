@@ -124,19 +124,19 @@ export const dataNavbar = [
    },
    {
       name: "Servicios",
-      url: "/servicios",
+      url: "/",
    },
    {
       name: "Nosotros",
-      url: "/nosotros",
+      url: "/",
    },
    {
       name: "Blog",
-      url: "/blog",
+      url: "/",
    },
    {
       name: "Contáctanos",
-      url: "/formInfo",
+      url: "/",
    },
 ];
 
