@@ -7,21 +7,30 @@ import Image from "next/image";
 const Copyright = () => {
    return (
       <div className="copyright-container">
-         <div className="copyright-content">
-            <p>© 2021 Mentalis. Todos los derechos reservados.</p>
+         <div className="copyright-content acento">
             <p>
-               <a href="https://www.mentalis.com.mx/aviso-de-privacidad">
-                  Aviso de privacidad
-               </a>
+               ©2024 Mentalis <br /> Todos los derechos reservados
             </p>
          </div>
          <div className="copyright-logo">
-            <Image
-               src="/images/logo-mentalis.svg"
-               alt="Logo de Mentalis"
-               width={100}
-               height={100}
-            />
+            <a
+               href="https://brunito.vercel.app/"
+               target="_blank"
+               rel="noreferrer"
+            >
+               <div className="logoMBDev">
+                  <p>
+                     Desarrollado por
+                     <br /> MarcosBrunoDev
+                  </p>
+                  <Image
+                     src="https://res.cloudinary.com/daoavxvau/image/upload/v1697171874/MBDevFS_vt13er.png"
+                     alt="MarcosBrunoDev"
+                     width={40}
+                     height={40}
+                  />
+               </div>
+            </a>
          </div>
       </div>
    );

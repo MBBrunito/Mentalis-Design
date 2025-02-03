@@ -1,0 +1,26 @@
+.copyright-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px;
+      padding: 0 20px;
+      background-color: var(--rosa-color);
+      color: black;
+      font-size: 14px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+}
+
+.logoMBDev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+}
+
+@media (max-width: 480px) {
+   .copyright-container {
+      flex-direction: column;
+   }
+}
