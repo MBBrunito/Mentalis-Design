@@ -77,12 +77,6 @@
    font-weight: 500;
 }
 
-/* Estilo para resaltar el día actual */
-#horario tr[data-day="0"] td {
-   font-weight: bold;
-   color: #333;
-}
-
 /* Resaltar el horario actual */
 #horario .highlight {
    background-color: #ffeb99; /* Amarillo claro */
