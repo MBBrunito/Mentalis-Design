@@ -21,6 +21,17 @@ const FooterMentalis = () => {
 
          // Convierte un rango de horas (ej: "09:00 am – 10:00 pm") a un formato manejable
          function parseTimeRange(timeRange) {
+            if (!timeRange || typeof timeRange !== "string") {
+               console.error(
+                  "Error: timeRange es undefined o no es una string",
+                  timeRange
+               );
+               return {
+                  start: { hour: 0, minute: 0 },
+                  end: { hour: 0, minute: 0 },
+               }; // Valor por defecto
+            }
+
             const [start, end] = timeRange
                .split("–")
                .map((time) => time.trim());
