@@ -46,9 +46,12 @@ const poppins = Poppins({
 
 // Metadata
 export const metadata = {
-   title: "Terapia psicológica y bienestar emocional | Mentalis",
-   description:
-      "Encuentra terapia psicológica profesional en línea o presencial con Mentalis. Mejora tu bienestar emocional con expertos en salud mental.",
+   // title: "Terapia psicológica y bienestar emocional | Mentalis",  // Activar al indexar
+   title: "Mentalis",
+   // description:
+   //    "Encuentra terapia psicológica profesional en línea o presencial con Mentalis. Mejora tu bienestar emocional con expertos en salud mental.",
+   description: "Página en desarrollo",
+   robots: "noindex, nofollow",
 };
 
 export default function RootLayout({ children }) {
