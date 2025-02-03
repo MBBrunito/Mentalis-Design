@@ -1,8 +1,3 @@
-import { notFound } from "next/navigation";
-
-export default function NosotrosPage() {
-   return notFound(); // Evita que Next.js genere esta página en el build
-}
 // import AboutUs from "@/components/AboutUs/AboutUs";
 // import Textos from "@/components/AboutUs/Text";
 // import "./nosotros.css";
