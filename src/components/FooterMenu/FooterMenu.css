@@ -8,7 +8,21 @@
 
 .menuFoot {
    display: flex;
+   justify-content: center;
    align-items: center;
-   gap: 10px;
-   padding: 2px 0;
+   gap: 30px;
+   padding: 5px 0;
+}
+.menuFooter {
+ color: black;
+}
+
+@media screen and (max-width: 480px) {
+   .menuFoot {
+      gap: 10px;
+   }
+   .menuFooter {
+      font-size: 12px;
+   }
+   
 }

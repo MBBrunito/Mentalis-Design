@@ -1,15 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
+import HeroHome from "@/components/HeroHome/HeroHome";
 import "./page.css";
 import MainBanner from "@/components/MainBanner/MainBanner";
+import DolorSolucionHome from "@/components/DolorSolucionHome/DolorSolucionHome";
 
 export default function LandigPage() {
    return (
       <div>
-         <div className="contenedor">
-            {/* <h1 className="titulo">MENTALIS</h1> */}
-            <MainBanner />
-            {/* <Carousel /> */}
-            <div className="intro">
+         <MainBanner />
+         <HeroHome />
+         <DolorSolucionHome />
+         {/* <div className="intro">
                <h2 className="introTitulo">
                   TRANSFORMADO VIDAS, NUTRIENDO MENTES.
                </h2>
@@ -38,8 +39,7 @@ export default function LandigPage() {
                   distingue el prestigio y el profesionalismo. Nuestro trabajo
                   habla por nosotros.
                </p>
-            </div>
-         </div>
+            </div> */}
       </div>
    );
 }

@@ -1,0 +1,98 @@
+.heroContent {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 80px 20px;
+   z-index: 3;
+   background-color: white;
+   box-sizing: border-box;
+}
+
+.heroIntro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   width:900px;
+}
+.heroIntro h2 {
+   margin: 0;
+   text-align: center;
+   font-size: 30px;
+}
+.heroIntro p {
+   margin: 5px 0;
+   text-align: justify;
+   font-size: 16px;
+}
+
+.ctaHero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+.ctaHero-buttons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   text-align: center;     /* Asegura que el texto esté centrado */
+   z-index: 3;
+}
+.ctaHero-button {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   padding: 7px 10px;
+   font-size: 15px;
+   font-weight: 500;
+   color: black;
+   background-color: #ff6b6b; /* Color principal */
+   border-radius: 8px;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+}
+.ctaHero-button:hover {
+   background-color: #e63946; /* Color más oscuro al pasar el mouse */
+   color: white !important;
+}
+
+.ctaHero-button.secondary {
+   background-color: transparent;
+   border: 2px solid black;
+}
+
+.ctaHero-button.secondary:hover {
+   background-color: #e63946;
+   color: White !important;
+}
+
+@media (max-width: 768px) {
+   .heroIntro {
+      width: 700px;
+   }
+   .heroIntroTitulo {
+      width: 460px;
+   }
+}
+
+@media (max-width: 480px) {
+   .heroIntro {
+      width: 100%;
+   }
+   .heroIntroTitulo {
+      width: 380px;
+   }
+   .heroIntro h2 {
+      font-size: 25px;
+   }
+   .ctaHero-buttons {
+      flex-direction: column;;
+   }
+}

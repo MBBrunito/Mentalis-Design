@@ -1,0 +1,136 @@
+.contenedorDolorSolucionHome {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 80px 40px;
+   z-index: 3;
+   background-color: var(--verde-color);
+   box-sizing: border-box;
+}
+.titleDolor {
+   margin: 0;
+   font-size: 30px;
+   width: 480px;
+}
+.titleSolucion {
+   margin: 0;
+   font-size: 30px;
+   width: 500px;
+}
+
+.dolor {
+   display: flex;
+   justify-content: center;
+   padding: 0;
+   gap: 40px;
+}
+.dolorText {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 30px 0;
+   width: 65%;
+   gap: 5px;
+}
+.dolorText p {
+   margin: 0;
+   font-size: 16px;
+   text-align: justify;
+}
+.dolorText ul {
+   margin-top: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.cta-buton {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 250px;
+   padding: 7px 10px;
+   font-size: 15px;
+   font-weight: 500;
+   color: black !important;
+   background-color: transparent; /* Color principal */
+   border-radius: 8px;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+   border: 2px solid black;
+}
+.cta-buton:hover {
+   background-color: white; /* Color más oscuro al pasar el mouse */
+   color: #e63946;
+}
+.background-container {
+   position: relative;
+   width: 35%; /* Se ajusta al ancho del contenedor */
+   background-image: url("https://res.cloudinary.com/daoavxvau/image/upload/v1738638410/2149729034_vjaaa9.jpg");
+   background-size: cover; /* Ajusta la imagen sin distorsionarla */
+   background-position: center; /* Centra la imagen */
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 20px;
+}
+.background-solucion {
+   position: relative;
+   width: 35%; /* Se ajusta al ancho del contenedor */
+   background-image: url("https://res.cloudinary.com/daoavxvau/image/upload/v1738640647/2147993379_itv7dj.jpg");
+   background-size: cover; /* Ajusta la imagen sin distorsionarla */
+   background-position: center; /* Centra la imagen */
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+   .dolor {
+      flex-direction: column;
+      align-items: center;
+   }
+   .dolorText {
+      width: 100%;
+      padding: 0;
+   }
+   .sec {
+      display: flex;
+      flex-direction: column-reverse;
+   }
+   .sol {
+      padding-top: 50px;
+   }
+   .background-container {
+      padding: 0;
+      width: 100%;
+      height: 250px;
+   }
+   .background-solucion {
+      padding: 0;
+      width: 100%;
+      height: 250px;
+   }
+}
+
+@media (max-width: 480px) {
+   .contenedorDolorSolucionHome {
+      padding: 80px 20px;
+   }
+   .titleDolor {
+      font-size: 25px;
+      width: 100%;
+   }
+   .titleSolucion {
+      font-size: 25px;
+      width: 100%;
+   }
+}

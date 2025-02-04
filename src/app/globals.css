@@ -28,9 +28,12 @@ a:hover {
 }
 
 body {
-   background-size: 100vh;
+   background-size: cover; /* Asegura que el fondo cubra la pantalla sin expandirse */
+   background-repeat: no-repeat;
    overflow-x: hidden;
+   overflow-y: auto; /* Permite el scroll si es necesario */
 }
+
 
 
 /* Contenedor de contenido */

@@ -14,7 +14,7 @@ const FooterMenu = () => {
          <div className={`menuFoot ${menuOpen ? "open" : ""}`}>
             {dataFooterMenu.map((item, index) => (
                <Link
-                  className={`boton acento ${
+                  className={`menuFooter acento ${
                      pathname === item.url ? "activo" : ""
                   }`}
                   key={index}
