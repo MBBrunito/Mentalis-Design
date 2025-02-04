@@ -1,0 +1,89 @@
+.team {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   padding-bottom: 80px;
+
+}
+.team-member {
+   position: relative;
+   overflow: hidden;
+   width: 200px; /* Ajusta según necesites */
+   height: 300px; /* Ajusta según necesites */
+}
+
+.team-member img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay */
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Oscurecimiento */
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: center;
+   text-align: center;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+}
+
+/* Texto */
+.texto {
+   padding: 5px;
+}
+.name {
+   font-size: 18px;
+   font-weight: bold;
+   color: var(--verde-color); /* Verde Mentalis */
+   margin: 0;
+}
+
+.profesion {
+   margin: 0;
+   font-size: 12px;
+}
+
+.role {
+   font-size: 15px;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin: 0;
+   color: var(--durazno-color);
+}
+
+/* Botón */
+.btn {
+   display: inline-block;
+   padding: 8px 16px;
+   color: white;
+   border: 2px solid white;
+   text-decoration: none;
+   font-weight: bold;
+   margin: 10px 0;
+   transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+   background: white;
+   color: black;
+}
+
+/* Efecto al pasar el mouse */
+.team-member:hover img {
+   transform: scale(1.1); /* Zoom en la imagen */
+}
+
+.team-member:hover .overlay {
+   opacity: 1; /* Muestra el overlay */
+}

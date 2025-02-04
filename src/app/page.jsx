@@ -3,6 +3,8 @@ import HeroHome from "@/components/HeroHome/HeroHome";
 import "./page.css";
 import MainBanner from "@/components/MainBanner/MainBanner";
 import DolorSolucionHome from "@/components/DolorSolucionHome/DolorSolucionHome";
+import AboutHome from "@/components/AboutHome/AboutHome";
+import NosotrosHome from "@/components/NosotrosHome/NosotrosHome";
 
 export default function LandigPage() {
    return (
@@ -10,6 +12,8 @@ export default function LandigPage() {
          <MainBanner />
          <HeroHome />
          <DolorSolucionHome />
+         <AboutHome />
+         <NosotrosHome />
          {/* <div className="intro">
                <h2 className="introTitulo">
                   TRANSFORMADO VIDAS, NUTRIENDO MENTES.

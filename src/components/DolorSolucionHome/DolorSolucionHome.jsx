@@ -7,7 +7,7 @@ const DolorSolucionHome = () => {
          <div className="dolor">
             <div className="dolorText">
                <h2 className="titleDolor">
-                  ¿Sientes que nada funciona y no sabes por dónde empezar?
+                  ¿Sientes que nada funciona <br />y no sabes por dónde empezar?
                </h2>
                <p>
                   A veces, la ansiedad, el estrés y la frustración se convierten
@@ -34,7 +34,7 @@ const DolorSolucionHome = () => {
             <div className="background-solucion"></div>
             <div className="dolorText sol">
                <h2 className="titleSolucion">
-                  En Mentalis, encuentras apoyo y guía profesional
+                  En Mentalis, encuentras apoyo <br />y guía profesional
                </h2>
                <p>
                   Nuestro equipo de psicólogos especializados está aquí para

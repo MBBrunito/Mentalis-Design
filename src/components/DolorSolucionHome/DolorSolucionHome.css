@@ -9,15 +9,9 @@
    background-color: var(--verde-color);
    box-sizing: border-box;
 }
-.titleDolor {
+.titleDolor, .titleSolucion {
    margin: 0;
    font-size: 30px;
-   width: 480px;
-}
-.titleSolucion {
-   margin: 0;
-   font-size: 30px;
-   width: 500px;
 }
 
 .dolor {
@@ -119,18 +113,17 @@
       width: 100%;
       height: 250px;
    }
+   .titleDolor, .titleSolucion {
+      font-size: 28px;
+   }
 }
 
 @media (max-width: 480px) {
    .contenedorDolorSolucionHome {
       padding: 80px 20px;
    }
-   .titleDolor {
-      font-size: 25px;
-      width: 100%;
-   }
-   .titleSolucion {
-      font-size: 25px;
+   .titleDolor, .titleSolucion {
+      font-size: 22px;
       width: 100%;
    }
 }
