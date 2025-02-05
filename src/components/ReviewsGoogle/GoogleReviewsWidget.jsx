@@ -17,7 +17,7 @@ const GoogleReviewsWidget = () => {
       <div className="footer-review">
          {/* Usa className en React */}
          <div
-            className="elfsight-app-87b8fce7-beb2-4ee4-8efb-3e538118172f"
+            className="elfsight-app-ed4f4b73-e291-4eba-b499-6b6d4fe69f6e"
             data-elfsight-app-lazy
          ></div>
       </div>
