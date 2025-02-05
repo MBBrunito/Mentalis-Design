@@ -157,7 +157,7 @@ export const Mailer = () => {
 
             {/* Mensaje de error de reCAPTCHA */}
             {recaptchaError && (
-               <p className="error">⚠️ Debes completar el reCAPTCHA</p>
+               <p className="error">⚠️ Debes completar el reCAPTCHA ⚠️</p>
             )}
 
             <button className="acento" type="submit">
