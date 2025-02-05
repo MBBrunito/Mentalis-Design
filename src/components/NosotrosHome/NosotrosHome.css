@@ -1,10 +1,11 @@
+.nosotrosHome {
+      padding-bottom: 80px;
+}
 .team {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   padding-bottom: 80px;
-
 }
 .team-member {
    position: relative;
@@ -86,4 +87,57 @@
 
 .team-member:hover .overlay {
    opacity: 1; /* Muestra el overlay */
+}
+
+.ctaMainNos {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.ctaNos-buttons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   text-align: center;     /* Asegura que el texto esté centrado */
+   z-index: 3;
+}
+
+.ctaNos-button {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   padding: 7px 10px;
+   font-size: 15px;
+   font-weight: 500;
+   color: black;
+   background-color: #ff6b6b; /* Color principal */
+   border-radius: 8px;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+}
+
+.ctaNos-button:hover {
+  background-color: #e63946; /* Color más oscuro al pasar el mouse */
+   color: white !important;
+}
+
+.ctaNos-button.secondary {
+   background-color: transparent;
+   border: 2px solid black;
+}
+
+.ctaNos-button.secondary:hover {
+   background-color: #e63946;
+   color: White !important;
+}
+
+@media (max-width: 480px) {
+   .ctaNos-buttons {
+      flex-direction: column;;
+   }
 }

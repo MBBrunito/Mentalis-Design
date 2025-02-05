@@ -243,49 +243,49 @@ export const dataVision = [
    }, */
 ];
 
-// export const imagesHome = [
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_d32e1ded_osrdjs.jpg",
-//       alt: "Diseño de Proyectos",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184929/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_8d89444c_ardkuj.jpg",
-//       alt: "Investigación",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_0f81fd53_bausz2.jpg",
-//       alt: "Coworking",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_5fb3b843_vsv9xp.jpg",
-//       alt: "Capacitaciones",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_7886399f_uvltk5.jpg",
-//       alt: "Grupos de Estudio",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184929/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_14a3d734_bajhpz.jpg",
-//       alt: "Servicio Social y Prácticas",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184929/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_836ec3b2_n75yhe.jpg",
-//       alt: "Psicoterapia en Línea",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_c99f4a79_xafmqw.jpg",
-//       alt: "Talleres",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_05522ab4_pakkbg.jpg",
-//       alt: "Psicoterapia Presencial",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_69b088fa_tgphlm.jpg",
-//       alt: "Supervisión Clínica Grupal",
-//    },
-//    {
-//       url: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_d6f69b22_qzl33e.jpg",
-//       alt: "Mentalis",
-//    },
-// ];
+export const dataCarousel = [
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_d6f69b22_qzl33e.jpg",
+      title: "Mentalis",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_d32e1ded_osrdjs.jpg",
+      title: "Diseño de Proyectos",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184929/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_8d89444c_ardkuj.jpg",
+      title: "Investigación",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_0f81fd53_bausz2.jpg",
+      title: "Coworking",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.50_5fb3b843_vsv9xp.jpg",
+      title: "Capacitaciones",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184928/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_7886399f_uvltk5.jpg",
+      title: "Grupos de Estudio",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184929/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_14a3d734_bajhpz.jpg",
+      title: "Servicio Social y Prácticas",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184929/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_836ec3b2_n75yhe.jpg",
+      title: "Psicoterapia en Línea",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.51_c99f4a79_xafmqw.jpg",
+      title: "Talleres",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_05522ab4_pakkbg.jpg",
+      title: "Psicoterapia Presencial",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_69b088fa_tgphlm.jpg",
+      title: "Supervisión Clínica Grupal",
+   },
+];

@@ -1,0 +1,65 @@
+.WhyContent {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 80px 20px;
+   z-index: 3;
+   background-color: var(--rosa-color);
+   box-sizing: border-box;
+}
+.WhyIntro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0;
+   width:900px;
+}
+.WhyIntro h2 {
+   margin: 0;
+   font-size: 30px;
+}
+.WhyIntro p {
+   margin: 5px 0;
+   text-align: justify;
+   font-size: 16px;
+}
+.WhyIntro h3 {
+   margin: 0;
+   margin-top: 10px;
+   font-size: 24px;
+}
+
+.custom-list {
+   list-style: none; /* Oculta los puntos de la lista */
+   padding: 0;
+   padding-left: 25px;
+}
+.custom-list li {
+   position: relative;
+   padding-left: 25px; /* Espacio para el icono */
+   padding-bottom: 3px;
+}
+.custom-list li::before {
+   content: "✔"; /* Ícono personalizado (puedes cambiarlo) */
+   position: absolute;
+   left: 0;
+   margin-top: -4px;
+   color: #2ecc71; /* Color del ícono */
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.textCarousel {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+@media (max-width: 768px) {
+   .WhyIntro {
+      width: 100%;
+   }
+}

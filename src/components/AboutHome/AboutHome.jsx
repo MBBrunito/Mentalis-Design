@@ -22,17 +22,6 @@ const AboutHome = () => {
                necesidades, acompañándote en cada paso de tu desarrollo
                personal.
             </p>
-            {/* Botones CTA
-            <div className="ctaAbout">
-               <div className="ctaAbout-buttons">
-                  <a href="/" className="ctaAbout-button acento">
-                     Contáctanos
-                  </a>
-                  <a href="/" className="ctaAbout-button secondary acento">
-                     Ver Servicios
-                  </a>
-               </div>
-            </div> */}
          </div>
       </div>
    );
