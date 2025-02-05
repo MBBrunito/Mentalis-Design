@@ -4,6 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Mailer.css";
+import Swal from "sweetalert2";
 
 export const Mailer = () => {
    const [formData, setFormData] = useState({
@@ -86,8 +87,23 @@ export const Mailer = () => {
             event.target,
             process.env.NEXT_PUBLIC_EMAILJS_USER_ID
          )
-         .then((response) => console.log("Mensaje enviado", response))
-         .catch((error) => console.log("Error al enviar", error));
+         .then((response) => {
+            Swal.fire({
+               icon: "success",
+               title: "Mensaje enviado",
+               text: "Nos pondremos en contacto contigo pronto.",
+               confirmButtonText: "OK",
+            });
+            console.log(response);
+         })
+         .catch((error) => {
+            Swal.fire({
+               icon: "error",
+               title: "Error",
+               text: "Hubo un problema al enviar el mensaje. Inténtalo nuevamente.",
+            });
+            console.log(error);
+         });
 
       // Limpiar formulario después del envío
       setFormData({
