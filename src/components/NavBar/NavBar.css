@@ -101,12 +101,12 @@
 /* Efecto hover */
 .boton:hover {
    font-weight: bold;
-   color: saddlebrown;
+   color: saddlebrown !important;
 }
 
 /* Estado activo */
 .boton.activo {
-   color: saddlebrown;
+   color: saddlebrown !important;
    font-weight: bold;
    padding-bottom: 5px;
 }

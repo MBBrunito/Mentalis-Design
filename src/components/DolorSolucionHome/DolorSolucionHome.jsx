@@ -61,7 +61,7 @@ const DolorSolucionHome = () => {
                   confianza donde trabajar en ti mismo con el acompañamiento
                   adecuado.
                </p>
-               <a href="/" className="cta-buton acento">
+               <a href="#contacto" className="cta-buton acento">
                   Contáctanos
                </a>
             </div>

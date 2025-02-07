@@ -141,19 +141,19 @@ export const dataNavbar = [
    },
    {
       name: "Servicios",
-      url: "/",
+      url: "#",
    },
    {
       name: "Nosotros",
-      url: "/",
+      url: "#",
    },
    {
       name: "Blog",
-      url: "/",
+      url: "#",
    },
    {
       name: "Contáctanos",
-      url: "/",
+      url: "#contacto",
    },
 ];
 
@@ -287,5 +287,20 @@ export const dataCarousel = [
    {
       image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_69b088fa_tgphlm.jpg",
       title: "Supervisión Clínica Grupal",
+   },
+];
+
+export const slides = [
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1707184930/Mentalis/Carrusel/Imagen_de_WhatsApp_2024-02-05_a_las_20.47.52_d6f69b22_qzl33e.jpg",
+      text: "Terapia psicológica\n en línea y presencial",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1704738922/Mentalis/WhatsApp_Image_2024-01-08_at_15.12.32_3_bhiuob.jpg",
+      text: "Psicólogos profesionales\n en Mentalis",
+   },
+   {
+      image: "https://res.cloudinary.com/daoavxvau/image/upload/v1704738921/Mentalis/WhatsApp_Image_2024-01-08_at_15.12.32_4_wxsxgr.jpg",
+      text: "Bienestar emocional\n con expertos en salud mental",
    },
 ];

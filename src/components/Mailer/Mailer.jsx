@@ -117,7 +117,7 @@ export const Mailer = () => {
    };
 
    return (
-      <div className="div-form">
+      <div id="contacto" className="div-form">
          <form className="form-mail" onSubmit={sendEmail}>
             <input
                type="text"

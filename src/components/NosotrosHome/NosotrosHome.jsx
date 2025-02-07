@@ -33,7 +33,7 @@ const NosotrosHome = () => {
          {/* Botones CTA */}
          <div className="ctaMainNos">
             <div className="ctaNos-buttons">
-               <a href="/" className="ctaNos-button acento">
+               <a href="#contacto" className="ctaNos-button acento">
                   Contáctanos
                </a>
                <a href="/" className="ctaNos-button secondary acento">

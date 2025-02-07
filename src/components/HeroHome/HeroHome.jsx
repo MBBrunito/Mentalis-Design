@@ -27,7 +27,7 @@ const HeroHome = () => {
             {/* Botones CTA */}
             <div className="ctaHero">
                <div className="ctaHero-buttons">
-                  <a href="/" className="ctaHero-button acento">
+                  <a href="#contacto" className="ctaHero-button acento">
                      Contáctanos
                   </a>
                   <a href="/" className="ctaHero-button secondary acento">

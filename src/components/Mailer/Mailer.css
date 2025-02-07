@@ -1,3 +1,7 @@
+#contacto {
+   scroll-margin-top: 120px; /* Ajusta según la altura de tu navbar */
+}
+
 .div-form {
       display: flex;
       justify-content: center;
