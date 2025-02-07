@@ -58,40 +58,26 @@ export default function RootLayout({ children }) {
          className={`${generalFont.variable} ${playfair.variable} ${roboto.variable} ${poppins.variable}`}
       >
          <head>
-            {/* Google Analytics */}
-            {isProduction && (
-               <>
-                  <Script
-                     strategy="afterInteractive"
-                     src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-                  />
-                  <Script
-                     id="google-analytics"
-                     strategy="afterInteractive"
-                     dangerouslySetInnerHTML={{
-                        __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-                           page_path: window.location.pathname,
-                        });
-                        `,
-                     }}
-                  />
-               </>
-            )}
+            {/* Cargar Google Analytics */}
+            <Script
+               strategy="afterInteractive"
+               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <Script
+               id="google-analytics"
+               strategy="afterInteractive"
+               dangerouslySetInnerHTML={{
+                  __html: `
+                     window.dataLayer = window.dataLayer || [];
+                     function gtag(){dataLayer.push(arguments);}
+                     gtag('js', new Date());
+                     gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                  `,
+               }}
+            />
          </head>
 
          <body>
-            <noscript>
-               <iframe
-                  src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-                  height="0"
-                  width="0"
-                  style={{ display: "none", visibility: "hidden" }}
-               ></iframe>
-            </noscript>
             <NavBar />
             <div className="children">{children}</div>
             <Footer />
