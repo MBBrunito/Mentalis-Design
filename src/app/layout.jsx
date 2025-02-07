@@ -42,6 +42,8 @@ const poppins = Poppins({
 });
 
 const isProduction = process.env.NEXT_PUBLIC_ENVIRONMENT === "production";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-58CH1QY9D2";
+console.log("Google Analytics ID:", GA_ID);
 
 export const metadata = {
    title: "Terapia psicológica y bienestar emocional | Mentalis",
