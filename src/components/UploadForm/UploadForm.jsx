@@ -13,8 +13,8 @@ const UploadForm = () => {
    };
 
    const handleUpload = async () => {
-      const cloudName = "dy3be98kn"; // Reemplaza con tu Cloudinary cloud name
-      const uploadPreset = "FotosWeb"; // Reemplaza con tu Upload Preset
+      //const cloudName = "dy3be98kn"; // Reemplaza con tu Cloudinary cloud name
+      //const uploadPreset = "FotosWeb"; // Reemplaza con tu Upload Preset
 
       if (files.length === 0) {
          alert("Selecciona al menos un archivo para subir.");
@@ -29,10 +29,13 @@ const UploadForm = () => {
       for (const file of files) {
          const formData = new FormData();
          formData.append("file", file);
-         formData.append("upload_preset", uploadPreset);
+         formData.append(
+            "upload_preset",
+            process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+         );
 
          const uploadPromise = fetch(
-            `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+            `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
             {
                method: "POST",
                body: formData,

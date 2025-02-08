@@ -1,0 +1,37 @@
+.generalCont {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   padding-bottom: 50px;
+}
+
+.postCont {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+.formImg {
+   width: 350px;
+}
+
+.textImg {
+   width: 550px;
+   height: 150px;
+}
+
+.upImgCont {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   width: 350px;
+   border: solid 1px black;
+   border-radius: 5px;
+   padding: 25px;
+}

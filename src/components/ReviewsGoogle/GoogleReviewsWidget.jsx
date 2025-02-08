@@ -25,3 +25,28 @@ const GoogleReviewsWidget = () => {
 };
 
 export default GoogleReviewsWidget;
+
+// "use client";
+// import { useEffect } from "react";
+// import Script from "next/script";
+
+// const GoogleReviewsWidget = () => {
+//    useEffect(() => {
+//       const script = document.createElement("script");
+//       script.src = "https://featurable.com/assets/bundle.js";
+//       script.defer = true;
+//       script.charset = "UTF-8";
+//       document.body.appendChild(script);
+//    }, []);
+
+//    return (
+//       <div>
+//          <div
+//             id="featurable-b86273aa-ca0b-4c13-84c2-334cf336b819"
+//             data-featurable-async
+//          ></div>
+//       </div>
+//    );
+// };
+
+// export default GoogleReviewsWidget;
