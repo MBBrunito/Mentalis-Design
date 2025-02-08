@@ -37,7 +37,10 @@ export default async function BlogPage() {
                         <strong>Autor:</strong> {post.author}
                      </p>
                      <p>{post.content.substring(0, 100)}...</p>
-                     <a href={`/blog/${post.id}`}>Leer más</a>
+
+                     <a href={`/blog/${post.id}`} className="read-more">
+                        Leer más...
+                     </a>
                   </div>
                ))}
             </div>

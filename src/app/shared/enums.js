@@ -149,7 +149,7 @@ export const dataNavbar = [
    },
    {
       name: "Blog",
-      url: "#",
+      url: "/blog",
    },
    {
       name: "Contáctanos",
