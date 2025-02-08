@@ -20,47 +20,66 @@ export default function NewPost() {
          return;
       }
 
-      // 1️⃣ Subimos la imagen a Cloudinary
-      const formData = new FormData();
-      formData.append("file", imageFile);
-      formData.append(
-         "upload_preset",
-         process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
-      );
+      try {
+         // 1️⃣ Subimos la imagen a Cloudinary
+         const formData = new FormData();
+         formData.append("file", imageFile);
+         formData.append(
+            "upload_preset",
+            process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+         );
 
-      const resImage = await fetch(
-         `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
-         { method: "POST", body: formData }
-      );
+         const resImage = await fetch(
+            `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
+            { method: "POST", body: formData }
+         );
 
-      const imageData = await resImage.json();
-      const imageUrl = imageData.secure_url; // URL de la imagen subida
+         if (!resImage.ok) {
+            throw new Error("Error al subir la imagen. Intenta nuevamente.");
+         }
 
-      // 2️⃣ Guardamos el post en la base de datos
-      const resPost = await fetch("/api/posts", {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify({ title, content, author, image_url: imageUrl }),
-      });
+         const imageData = await resImage.json();
+         const imageUrl = imageData.secure_url;
 
-      if (!resPost.ok) {
-         const data = await resPost.json();
-         setError(data.error);
-         return;
+         // 2️⃣ Guardamos el post en la base de datos
+         const resPost = await fetch("/api/posts", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+               title,
+               content,
+               author,
+               image_url: imageUrl,
+            }),
+         });
+
+         if (!resPost.ok) {
+            const data = await resPost.json();
+            throw new Error(
+               data.error || "Error al guardar el post. Intenta nuevamente."
+            );
+         }
+
+         // 3️⃣ Confirmación y redirección
+         const goToBlog = confirm(
+            "✅ Post publicado con éxito. ¿Quieres ir al blog?"
+         );
+         if (goToBlog) {
+            router.push("/blog");
+         } else {
+            router.push("/");
+         }
+
+         // 4️⃣ Resetear formulario solo si todo salió bien
+         setTitle("");
+         setContent("");
+         setAuthor("");
+         setImageFile(null);
+         setError("");
+      } catch (error) {
+         console.error(error);
+         setError(error.message);
       }
-
-      // 3️⃣ Mostrar el alert antes de redirigir
-      if (confirm("✅ Post publicado con éxito. ¿Quieres ir al blog?")) {
-         router.push("/blog");
-      }
-
-      // 4️⃣ Resetear el formulario y redirigir
-      setTitle("");
-      setContent("");
-      setAuthor("");
-      setImageFile(null);
-      setError("");
-      router.push("/blog"); // Redirigir a la lista de posts
    };
 
    return (
