@@ -10,6 +10,7 @@ export default function NewPost() {
    const [author, setAuthor] = useState("");
    const [imageFile, setImageFile] = useState(null);
    const [error, setError] = useState("");
+   const [loading, setLoading] = useState(false); // Estado para mostrar el mensaje de carga
    const router = useRouter();
 
    const handleSubmit = async (e) => {
@@ -19,6 +20,8 @@ export default function NewPost() {
          setError("Todos los campos son obligatorios, incluida la imagen");
          return;
       }
+
+      setLoading(true); // ⏳ Mostrar indicador de carga
 
       try {
          // 1️⃣ Subimos la imagen a Cloudinary
@@ -77,8 +80,9 @@ export default function NewPost() {
          setImageFile(null);
          setError("");
       } catch (error) {
-         console.error(error);
          setError(error.message);
+      } finally {
+         setLoading(false); // 🔄 Ocultar indicador de carga
       }
    };
 
@@ -86,6 +90,10 @@ export default function NewPost() {
       <div className="generalCont">
          <h1>Nuevo Post</h1>
          {error && <p style={{ color: "red" }}>{error}</p>}
+         {loading && (
+            <p style={{ color: "blue" }}>⏳ Publicando post...</p>
+         )}{" "}
+         {/* Indicador de carga */}
          <form className="postCont" onSubmit={handleSubmit}>
             <input
                className="formImg"
@@ -107,12 +115,15 @@ export default function NewPost() {
                value={author}
                onChange={(e) => setAuthor(e.target.value)}
             />
-
             {/* Componente de subida de imagen */}
             <div className="upImgCont">
                <UploadImage setImageFile={setImageFile} />
             </div>
-            <button type="submit">Publicar</button>
+            <button type="submit" disabled={loading}>
+               {loading ? "Publicando..." : "Publicar"}
+            </button>{" "}
+            {loading && <p style={{ color: "blue" }}>⏳ Publicando post...</p>}{" "}
+            {/* Indicador de carga */}
          </form>
       </div>
    );
