@@ -1,5 +1,7 @@
 import Image from "next/image";
 import "./blog.css";
+import FacebookCarousel from "@/components/FacebookCarousel/FacebookCarousel";
+import InstagramCarousel from "@/components/InstagramCarousel/InstagramCarousel";
 
 async function getPosts() {
    const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts`, {
@@ -45,6 +47,8 @@ export default async function BlogPage() {
                ))}
             </div>
          )}
+         <FacebookCarousel />
+         <InstagramCarousel />
       </div>
    );
 }

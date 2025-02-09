@@ -1,0 +1,26 @@
+.fcarousel-container {
+   max-width: 95vw;
+   margin: auto;
+   text-align: center;
+}
+
+.fcarousel {
+   display: flex;
+   overflow-x: auto;
+   gap: 20px;
+   padding: 20px;
+   scroll-snap-type: x mandatory;
+}
+
+.fcarousel-item {
+   flex: 0 0 auto;
+
+   scroll-snap-align: center;
+   border-radius: 10px;
+   overflow: hidden;
+}
+.fcarousel-item iframe {
+
+   height: auto !important;
+   min-height: 450px; /* Ajustar según la necesidad */
+}

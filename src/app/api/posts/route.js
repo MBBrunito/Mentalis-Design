@@ -9,6 +9,8 @@ async function ensureTableExists() {
         content TEXT NOT NULL,
         author TEXT NOT NULL,
         image_url TEXT,
+        facebook_iframe TEXT DEFAULT NULL,
+        instagram_iframe TEXT DEFAULT NULL,
         created_at TIMESTAMP DEFAULT NOW(),
         updated_at TIMESTAMP DEFAULT NULL,
         previous_post_id INTEGER REFERENCES posts(id) ON DELETE SET NULL,
@@ -38,7 +40,14 @@ export async function POST(req) {
    try {
       await ensureTableExists(); // Verifica si la tabla existe antes de insertar datos
 
-      const { title, content, author, image_url } = await req.json();
+      const {
+         title,
+         content,
+         author,
+         image_url,
+         facebook_iframe,
+         instagram_iframe,
+      } = await req.json();
 
       if (!title || !content || !author) {
          return Response.json(
@@ -48,8 +57,10 @@ export async function POST(req) {
       }
 
       const result = await sql`
-      INSERT INTO posts (title, content, author, image_url, updated_at)
-      VALUES (${title}, ${content}, ${author}, ${image_url}, NOW())
+      INSERT INTO posts (title, content, author, image_url, facebook_iframe, instagram_iframe, updated_at)
+      VALUES (${title}, ${content}, ${author}, ${image_url}, ${
+         facebook_iframe || null
+      }, ${instagram_iframe || null}, NOW())
       RETURNING *;
     `;
 

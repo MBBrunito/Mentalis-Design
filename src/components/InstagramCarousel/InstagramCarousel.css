@@ -1,0 +1,36 @@
+.icarousel-container {
+   max-width: 95vw;
+   margin: auto;
+   text-align: center;
+}
+
+.icarousel {
+   display: flex;
+   overflow-x: auto;
+   gap: 20px;
+   padding: 20px;
+   scroll-snap-type: x mandatory;
+}
+
+.icarousel-item {
+   flex: 0 0 auto;
+   scroll-snap-align: center;
+   border-radius: 10px;
+}
+
+.iloading {
+   text-align: center;
+   font-size: 18px;
+   color: #555;
+   margin-top: 20px;
+}
+
+@keyframes loadingAnimation {
+   0% { opacity: 0.5; }
+   50% { opacity: 1; }
+   100% { opacity: 0.5; }
+}
+
+.iloading {
+   animation: loadingAnimation 1.5s infinite;
+}

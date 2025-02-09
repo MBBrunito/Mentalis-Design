@@ -9,6 +9,8 @@ export default function NewPost() {
    const [content, setContent] = useState("");
    const [author, setAuthor] = useState("");
    const [imageFile, setImageFile] = useState(null);
+   const [facebookIframe, setFacebookIframe] = useState("");
+   const [instagramIframe, setInstagramIframe] = useState("");
    const [error, setError] = useState("");
    const [loading, setLoading] = useState(false); // Estado para mostrar el mensaje de carga
    const router = useRouter();
@@ -53,6 +55,8 @@ export default function NewPost() {
                content,
                author,
                image_url: imageUrl,
+               facebook_iframe: facebookIframe || null,
+               instagram_iframe: instagramIframe || null,
             }),
          });
 
@@ -78,6 +82,8 @@ export default function NewPost() {
          setContent("");
          setAuthor("");
          setImageFile(null);
+         setFacebookIframe("");
+         setInstagramIframe("");
          setError("");
       } catch (error) {
          setError(error.message);
@@ -119,6 +125,21 @@ export default function NewPost() {
             <div className="upImgCont">
                <UploadImage setImageFile={setImageFile} />
             </div>
+            {/* Campos opcionales para iframes */}
+            <textarea
+               className="textImg"
+               placeholder="Pega aquí el iframe de Facebook (opcional)..."
+               value={facebookIframe}
+               onChange={(e) => setFacebookIframe(e.target.value)}
+               rows={3}
+            />
+            <textarea
+               className="textImg"
+               placeholder="Pega aquí el iframe de Instagram (opcional)..."
+               value={instagramIframe}
+               onChange={(e) => setInstagramIframe(e.target.value)}
+               rows={3}
+            />
             <button type="submit" disabled={loading}>
                {loading ? "Publicando..." : "Publicar"}
             </button>{" "}
