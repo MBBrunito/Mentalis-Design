@@ -172,7 +172,7 @@ export const dataFooterMenu = [
    },
    {
       name: "Site Map",
-      url: "/",
+      url: "/sitemap.xml",
    },
 ];
 

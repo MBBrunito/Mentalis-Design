@@ -1,4 +1,5 @@
 import sql from "@/lib/db";
+import { slugify } from "@/lib/utils"; // Función para generar slugs
 
 async function ensureTableExists() {
    try {
@@ -6,6 +7,7 @@ async function ensureTableExists() {
       CREATE TABLE IF NOT EXISTS posts (
         id SERIAL PRIMARY KEY,
         title TEXT NOT NULL,
+        slug TEXT UNIQUE NOT NULL,
         content TEXT NOT NULL,
         author TEXT NOT NULL,
         image_url TEXT,
@@ -49,20 +51,22 @@ export async function POST(req) {
          instagram_iframe,
       } = await req.json();
 
-      if (!title || !content || !author) {
+      if (!title || !content || !author || !image_url) {
          return Response.json(
             { error: "Todos los campos obligatorios deben ser completados" },
             { status: 400 }
          );
       }
 
+      const slug = slugify(title); // Genera el slug basado en el título
+
       const result = await sql`
-      INSERT INTO posts (title, content, author, image_url, facebook_iframe, instagram_iframe, updated_at)
-      VALUES (${title}, ${content}, ${author}, ${image_url}, ${
+         INSERT INTO posts (title, slug, content, author, image_url, facebook_iframe, instagram_iframe, updated_at)
+         VALUES (${title}, ${slug}, ${content}, ${author}, ${image_url}, ${
          facebook_iframe || null
       }, ${instagram_iframe || null}, NOW())
-      RETURNING *;
-    `;
+         RETURNING *;
+      `;
 
       return Response.json(result[0], { status: 201 });
    } catch (error) {

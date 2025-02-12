@@ -1,9 +1,27 @@
 import Image from "next/image";
 import "./post.css";
+import sql from "@/lib/db";
 
-async function getPost(id) {
+export async function GET(req, { params }) {
+   try {
+      const { id } = params; // "id" ahora contendrá el slug del post
+      const result =
+         await sql`SELECT * FROM posts WHERE slug = ${id} AND is_active = TRUE`;
+
+      if (result.length === 0) {
+         return Response.json({ error: "Post no encontrado" }, { status: 404 });
+      }
+
+      return Response.json(result[0]);
+   } catch (error) {
+      console.error("Error en GET /api/posts/[id]:", error);
+      return Response.json({ error: error.message }, { status: 500 });
+   }
+}
+
+async function getPost(slug) {
    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts/${id}`,
+      `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts/${slug}`,
       { cache: "no-store" }
    );
 
@@ -15,8 +33,8 @@ async function getPost(id) {
 }
 
 export default async function PostPage({ params }) {
-   const { id } = params;
-   const post = await getPost(id);
+   const { slug } = params; // Asegurar que se está pasando correctamente
+   const post = await getPost(slug);
 
    return (
       <div>

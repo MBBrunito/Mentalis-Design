@@ -40,7 +40,8 @@ export default async function BlogPage() {
                      </p>
                      <p>{post.content.substring(0, 100)}...</p>
 
-                     <a href={`/blog/${post.id}`} className="read-more">
+                     {/* Enlace actualizado para usar el slug en lugar del id */}
+                     <a href={`/blog/${post.slug}`} className="read-more">
                         Leer más...
                      </a>
                   </div>
